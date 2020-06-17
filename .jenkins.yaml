@@ -1,0 +1,9 @@
+---
+triggers:
+  cron: "@daily"
+
+extra_jobs:
+  - name: docker-influxdb2 
+    builders:
+      - docker
+    docker_name: docker-influxdb2 
