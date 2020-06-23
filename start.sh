@@ -8,8 +8,10 @@ FQDN="influx-1.sunet.se"
 mkdir -p /home/influxdb
 chown -R influxdb:influxdb /home/influxdb
 
-# Not sure why but I need ownership of certificate & key or influx cannot start(!?)
+# Not sure why but I need ownership of certificate & key and specific rights or influx cannot start(!?)
 chown influxdb:influxdb ${CERTDIR}/${FQDN}.*
+chmod 644 ${CERTDIR}/${FQDN}.crt
+chmod 600 ${CERTDIR}/${FQDN}.key
 
 # Drop the backup of your database somewhere (remember to have the influxdb-user on the system and owning all files) then restore with below
 runuser influxdb -c "/opt/local/bin/influxd restore --backup-path /home/influxdb/backup/today"
