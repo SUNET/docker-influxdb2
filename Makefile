@@ -1,5 +1,5 @@
 VERSION:=2.0.0
-NAME:=influxdb
+NAME:=docker-influxdb2
 
 all: build push
 
