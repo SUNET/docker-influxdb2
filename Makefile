@@ -12,7 +12,7 @@ update:
 	docker tag $(NAME):$(VERSION) docker.sunet.se/$(NAME):$(VERSION)
 
 run:
-	docker run -p 9999:9999 -v /var/lib/influxdb:/home/influxdb -v /etc/passwd:/etc/passwd:ro -v /etc/group:/etc/group:ro -v /etc/dehydrated:/etc/ssl:ro docker.sunet.se/$(NAME):$(VERSION) 
+	docker run -p 9999:9999 -v /var/lib/influxdb:/home/influxdb -v /etc/passwd:/etc/passwd:ro -v /etc/group:/etc/group:ro -v /etc/dehydrated:/etc/dehydrated docker.sunet.se/$(NAME):$(VERSION) 
 
 push:
 	docker push docker.sunet.se/$(NAME):$(VERSION)
