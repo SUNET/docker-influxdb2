@@ -14,7 +14,7 @@ RUN chmod a+rx /start.sh
 # So in theory everything above SHOULD work after the migration has been done, the rows below are for future reference/use for migration
 RUN wget --quiet --no-check-certificate https://dl.influxdata.com/influxdb/releases/influxdb_2.0.0-beta.10_linux_amd64.tar.gz
 RUN tar xvzf influxdb_2.0.0-beta.10_linux_amd64.tar.gz
-RUN mv /opt/local/bin/influx2 /opt/local/bin/influx2_new
+RUN mv /opt/local/bin/influxd /opt/local/bin/influxd_new
 RUN mv /opt/local/bin/influx /opt/local/bin/influx_new
 RUN mv -v influ*/influ* /opt/local/bin/
 EXPOSE 8046
