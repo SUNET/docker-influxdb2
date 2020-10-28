@@ -11,8 +11,7 @@ INFLUXDB="/var/lib/influxdb/"
 #FLAGS="--http-bind-address=0.0.0.0:9999 --log-level debug --reporting-disabled"
 # FIXME: I'd want it to run with something similar to below but it doesnt work as intended, you can run it wherever you like... as long as it's in a users home directory 
 FLAGS="--bolt-path ${INFLUXDB}.influxdbv2/influxd.bolt --engine-path ${INFLUXDB}.influxdbv2/engine --http-bind-address 127.0.0.1:9999 --log-level debug --reporting-disabled"
-/usr/local/bin/influxdb $FLAGS
-
+/usr/local/bin/influxd $FLAGS
 
 ### FIXME: This is just an ugly hack to try and migrate the database from influx2-beta to influx2-rc
 #mv /home/influxdb/.influxdbv2 /home/influxdb/.influxdbv2_old
