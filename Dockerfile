@@ -16,9 +16,9 @@ RUN chmod a+rx /start.sh
 #RUN mv /opt/local/bin/influxd /opt/local/bin/influxd_new
 #RUN mv /opt/local/bin/influx /opt/local/bin/influx_new
 #RUN mv -v influ*/influ* /opt/local/bin/
-#EXPOSE 8046
+#EXPOSE 8086
 ### END OF CRAZY MIGRATION
 
-EXPOSE 9999
+EXPOSE 8086 
 
 ENTRYPOINT ["/start.sh"]
