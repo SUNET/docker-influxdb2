@@ -2,7 +2,7 @@ FROM ubuntu:20.10
 
 RUN apt-get update && apt-get install -y --no-install-recommends wget
 
-RUN wget --quiet --no-check-certificate https://dl.influxdata.com/influxdb/releases/influxdb-2.0.0-rc.2_linux_amd64.tar.gz
+RUN wget --quiet --no-check-certificate https://dl.influxdata.com/influxdb/releases/influxdb_2.0.2_amd64.deb 
 RUN tar xvfz influxdb-2.*linux_amd64.tar.gz
 RUN mv -v influ*/influ* /usr/local/bin/
 COPY start.sh /
