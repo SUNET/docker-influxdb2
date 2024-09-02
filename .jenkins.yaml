@@ -2,7 +2,7 @@
 triggers:
   cron: "@daily"
 
-docker_skip_tag_as_latest: false
+docker_skip_tag_as_latest: true
 
 extra_jobs:
   - name: docker-influxdb2 
