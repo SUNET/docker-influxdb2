@@ -2,6 +2,8 @@
 triggers:
   cron: "@daily"
 
+docker_skip_tag_as_latest: false
+
 extra_jobs:
   - name: docker-influxdb2 
     builders:
